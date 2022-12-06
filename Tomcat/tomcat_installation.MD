@@ -44,7 +44,7 @@ now application is accessible on port 8090. but tomcat application doesnt allow 
 #search for context.xml
 find / -name context.xml
 ```
-above command gives 3 context.xml files. comment '(<!-- & -->)' `Value ClassName` field on files which are under webapp directory. 
+above command gives 3 context.xml files. comment (<!-- & -->) `Value ClassName` field on files which are under webapp directory. 
 After that restart tomcat services to effect these changes
 ```sh 
 tomcatdown
