@@ -45,5 +45,8 @@ So far you have completed installation of maven software to support maven plugin
   - `Manage Jenkins` > `Jenkins Plugins` > `available` > `Maven Integration`
   
 - Configure java path
+  - `Manage Jenkins` > `Global Tool Configuration` > `JDK`
+
+- Configure maven path
   - `Manage Jenkins` > `Global Tool Configuration` > `Maven`
 
