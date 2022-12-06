@@ -2,24 +2,24 @@
 Jenkins is a self-contained Java-based program, ready to run out-of-the-box, with packages for Windows, Mac OS X and other Unix-like operating systems. As an extensible automation server, Jenkins can be used as a simple CI server or turned into the continuous delivery hub for any project.
 
 ### Prerequisites
-1. EC2 RHEL 7.x Instance [Get help here](https://www.youtube.com/watch?v=KDtS6BzJo3A)
+1. EC2 RHEL 9.x Instance
    - With Internet Access
    - Security Group with Port `8080` open for internet
-1. Java v1.8.x or Java v1.11.x
+1. Java v11.x
 
 ## Install Java
 We will be using open java for our demo, Get latest version from http://openjdk.java.net/install/
 ```sh
-yum install java-1.8*
-#yum -y install java-1.8.0-openjdk
+yum install java-11*
+#yum -y install java-11-openjdk.x86_64q
 ```
 
 ### Confirm Java Version
 Lets install java and set the java home
 ```sh
 java -version
-find /usr/lib/jvm/java-1.8* | head -n 3
-#JAVA_HOME=/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.191.b12-1.el7_6.x86_64
+find /usr/lib/jvm/java-11* | head -n 3
+#JAVA_HOME=/usr/lib/jvm/java-11-openjdk-11.0.17.0.8-2.el9_0.x86_64
 export JAVA_HOME
 PATH=$PATH:$JAVA_HOME
 # To set it permanently update your .bash_profile
@@ -28,9 +28,9 @@ source ~/.bash_profile
 _The output should be something like this,_
 ```
 [root@~]# java -version
-openjdk version "1.8.0_151"
-OpenJDK Runtime Environment (build 1.8.0_151-b12)
-OpenJDK 64-Bit Server VM (build 25.151-b12, mixed mode)
+openjdk version "11.0.17" 2022-10-18 LTS
+OpenJDK Runtime Environment (Red_Hat-11.0.17.0.8-2.el9_0) (build 11.0.17+8-LTS)
+OpenJDK 64-Bit Server VM ((Red_Hat-11.0.17.0.8-2.el9_0) (build 11.0.17+8-LTS, mixed mode, sharing)
 ```
 
 ## Install Jenkins
@@ -43,7 +43,10 @@ Or check the Jenkins official documentation for linux installation https://www.j
 yum -y install wget
 wget -O /etc/yum.repos.d/jenkins.repo https://pkg.jenkins.io/redhat-stable/jenkins.repo
 rpm --import https://pkg.jenkins.io/redhat-stable/jenkins.io.key
-yum -y install jenkins
+yum upgrade
+# Add required dependencies for the jenkins package
+yum install jenkins
+systemctl daemon-reload
 ```
 
 ### Start Jenkins
