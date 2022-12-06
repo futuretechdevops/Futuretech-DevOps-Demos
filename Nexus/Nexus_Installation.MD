@@ -57,6 +57,6 @@ service is not starting?
 Unable to access nexus URL?
 - make sure port 8081 is opened in security group. 
 
-#### Setup nexus on jenkins console
+### Setup nexus on jenkins console
 - Install maven plugin without restart  
   - `Manage Jenkins` > `Jenkins Plugins` > `available` > `Nexus Artifact Uploader`
