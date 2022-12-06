@@ -58,8 +58,13 @@ service is not starting?
 Unable to access nexus URL?
 - make sure port 8081 is opened in security group. 
 
-### Next Steps
-- [x] [Configure Users & Groups in Jenkins](https://youtu.be/jZOqcB32dYM)
-- [x] [Secure your Jenkins Server](https://youtu.be/19FmJumnkDc)
-- [x] [Jenkins Plugin Installation](https://youtu.be/p_PqPBbjaZ4)
-- [x] [Jenkins Master-Slave Configuration](https://youtu.be/hwrYURP4O2k)
+Setup maven on jenkins console
+Install maven plugin without restart
+Manage Jenkins > Jenkins Plugins > available > Maven Invoker
+(Update) Install "Maven Integration" Plugin as well
+Install maven Integration Plugin without restart
+
+Manage Jenkins > Jenkins Plugins > available > Maven Integration
+Configure java path
+
+Manage Jenkins > Global Tool Configuration > JDK
