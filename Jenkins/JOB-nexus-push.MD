@@ -12,7 +12,7 @@
    - Name            : **my-maven**
    - Version policy  : **Snapshot**
    - Blob Store      : **Default**
-   - `Create repository`
+   - Submit `Create repository`
 
 #### Nexus-Push Jobs
 1. Create - `new item`
