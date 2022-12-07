@@ -1,4 +1,4 @@
-#  Jenkins maven-junit-test configuration
+#  Jenkins maven-junit-test job configuration
 
 #### Prerequisites
 1. Jenkins server
