@@ -7,6 +7,13 @@
 4. Nexus Server installtion
 5. **Nexus Artifact Uploader** plugin installation 
 
+#### In Nexus UI Create the new repository
+`Settings` > `Repositories` > `create repository` > `maven2 (hosted)`
+   - Name            : **my-maven**
+   - Version policy  : **Snapshot**
+   - Blob Store      : **Default**
+   - `Create repository`
+
 #### Nexus-Push Jobs
 1. Create - `new item`
 1. Enter the job name : **Nexus-Push**
@@ -28,4 +35,3 @@
    - ArtifactId    : **my-maven**
    - Type          : **war**
    - File          : **target/studentapp-2.5-SNAPSHOT.war**
- 
