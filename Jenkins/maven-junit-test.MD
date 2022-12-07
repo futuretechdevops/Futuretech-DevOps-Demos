@@ -7,7 +7,7 @@
 
 #### maven-junit-test Jobs
 1. Create - `new item`
-1. Enter the job name – `maven-junit-test`
+1. Enter the job name – [maven-junit-test]
    - Chose `Freestyle` project
 1. Under `Source Code Management` > `GIT`
    - add the Repository URL : https://github.com/mkyong/maven-examples.git
