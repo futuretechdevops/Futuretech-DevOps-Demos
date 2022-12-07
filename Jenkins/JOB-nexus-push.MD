@@ -14,7 +14,7 @@
    - Blob Store      : **Default**
    - Submit `Create repository`
 
-#### Nexus-Push Jobs
+#### In Jenkins Create Nexus-Push Jobs
 1. Create - `new item`
 1. Enter the job name : **Nexus-Push**
    - Chose `Freestyle` project
