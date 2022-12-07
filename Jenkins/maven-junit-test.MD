@@ -5,7 +5,7 @@
 2. Maven installed on Jenkins node
 3. Maven plugins installed on Jenkins UI.
 
-### maven-junit-test Jobs
+#### maven-junit-test Jobs
 1. Create - `new item`
 1. Enter the job name – `maven-junit-test`
    - Chose `Freestyle` project
