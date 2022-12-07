@@ -1,0 +1,67 @@
+#  Jenkins maven-junit-test configuration
+
+#### Prerequisites
+1. Jenkins server
+2. Maven installed on Jenkins node
+3. Maven plugins installed on Jenkins UI.
+
+### maven-junit-test Jobs
+1. Create - `new item`
+1. Enter the job name – `maven-junit-test`
+   - Chose `Freestyle` project
+1. Under `Source Code Management` > `GIT`
+   - add the Repository URL : https://github.com/mkyong/maven-examples.git
+   - add the Branches to build : */master
+1. Under `Build Steps` > `Invoke top-level Maven targets`
+   - Select `Maven Version`
+   - `Goals` : clean test
+1. Build job
+1. Check "console output"
+
+
+
+#### Install Maven on Jenkins
+Download maven packages https://maven.apache.org/download.cgi onto Jenkins server. In this case I am using /opt/maven as my installation directory
+	- Link : https://repo.maven.apache.org/maven2/org/apache/maven/apache-maven/3.6.0/
+```sh
+  # Creating maven directory under /opt
+  mkdir /opt/maven
+  cd /opt/maven
+  # downloading maven version 3.6.0
+  wget https://repo.maven.apache.org/maven2/org/apache/maven/apache-maven/3.6.0/apache-maven-3.6.0-bin.tar.gz
+  tar xzf /opt/maven/apache-maven-3.6.0-bin.tar.gz
+ ```
+	
+Setup M2_HOME and M2 paths in .bash_profile of user and add these to path variable
+```sh
+  vi ~/.bash_profile
+  M2_HOME=/opt/maven/apache-maven-3.6.0
+  M2=$M2_HOME/bin
+  PATH=$PATH:$M2_HOME:$M2
+```
+Load the newly added path
+```sh
+  source ~/.bash_profile
+```
+#### Check point 
+logoff and login to check maven version
+Check maven version 
+```sh
+  mvn –version
+```
+So far you have completed installation of maven software to support maven plugin on jenkins console. Let's jump onto jenkins to complete remining steps. 
+
+#### Setup maven on jenkins console
+- Install maven plugin without restart  
+  - `Manage Jenkins` > `Jenkins Plugins` > `available` > `Maven Invoker`
+  
+#### (Update) Install "Maven Integration" Plugin as well
+- Install maven Integration Plugin without restart 
+  - `Manage Jenkins` > `Jenkins Plugins` > `available` > `Maven Integration`
+  
+- Configure java path
+  - `Manage Jenkins` > `Global Tool Configuration` > `JDK`
+
+- Configure maven path
+  - `Manage Jenkins` > `Global Tool Configuration` > `Maven`
+
