@@ -18,4 +18,4 @@
 
 1. Publish JUnit Reports
 1. Under `Post-build Actions` > `Publish JUnit test result report`
-   - Test report XMLs : **target/surefire-reports/*.xml**
+   - Test report XMLs :  **target/surefire-reports/*.xml**
