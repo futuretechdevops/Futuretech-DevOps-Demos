@@ -88,3 +88,29 @@ http://YOUR-SERVER-PUBLIC-IP:8080
 1. Save your job 
 1. Build job
 1. Check "console output"
+
+# Install Jenkins on Docker
+### Dockerfile
+```sh
+FROM oraclelinux:7.9
+LABEL maintainer="futuretechdevops@gmail.com"
+USER root
+RUN yum update -y && yum -y install java-11-openjdk.i686 wget unzip
+RUN wget -O /etc/yum.repos.d/jenkins.repo https://pkg.jenkins.io/redhat-stable/jenkins.repo
+RUN rpm --import https://pkg.jenkins.io/redhat-stable/jenkins.io.key
+RUN yum install jenkins -y
+RUN chown -R jenkins:jenkins /var/lib/jenkins
+ENV JENKINS_HOME=/var/lib/jenkins
+ENV JENKINS_WEBROOT=%C/jenkins/war
+ENV JAVA_OPTS=-Djava.awt.headless=true
+ENV JENKINS_PORT=8080
+
+ADD https://repo.maven.apache.org/maven2/org/apache/maven/apache-maven/3.6.0/apache-maven-3.6.0-bin.tar.gz /opt
+RUN tar -xzf /opt/apache-maven-3.6.0-bin.tar.gz -C /opt
+RUN rm -f /opt/apache-maven-3.6.0-bin.tar.gz
+
+
+
+EXPOSE 8080 8090
+ENTRYPOINT "/usr/bin/jenkins"
+```
