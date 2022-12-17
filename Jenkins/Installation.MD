@@ -72,6 +72,10 @@ http://YOUR-SERVER-PUBLIC-IP:8080
   - `Admin` > `Configure` > `Password`
 - Configure `java` path
   - `Manage Jenkins` > `Global Tool Configuration` > `JDK`  
+```sh
+Name : OpenJdk-11
+JAVA_HOME : /usr/lib/jvm/java-11-openjdk-11.0.17.0.8-2.0.1.el7_9.i386
+```
 - Create another admin user id
 
 ### Test Jenkins Jobs
