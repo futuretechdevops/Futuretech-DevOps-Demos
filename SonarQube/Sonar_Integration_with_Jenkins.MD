@@ -12,9 +12,9 @@ Integration SonarQube server with Jenkins is necessary to store your reports. Fo
 
 Login to Jenkins server and install sonarqube scanner. 
 
-- SonarQube scanner URL : https://docs.sonarqube.org/display/SCAN/Analyzing+with+SonarQube+Scanner
-- Package : https://sonarsource.bintray.com/Distribution/sonar-scanner-cli/sonar-scanner-cli-3.2.0.1227-linux.zip
-- 
+- SonarQube scanner URL : https://docs.sonarqube.org/9.6/analyzing-source-code/scanners/sonarscanner/
+- Package : https://binaries.sonarsource.com/Distribution/sonar-scanner-cli/sonar-scanner-cli-4.7.0.2747-linux.zip
+
 ```sh 
 # wget https://sonarsource.bintray.com/Distribution/sonar-scanner-cli/sonar-scanner-cli-3.2.0.1227-linux.zip
 # unzip sonar-scanner-cli-3.2.0.1227-linux.zip
