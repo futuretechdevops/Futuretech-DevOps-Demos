@@ -13,6 +13,7 @@ Install MySQL client version
 
  ```sh
   # yum install mysql
+  # yum insatll mysql-server  --> RHEL 9
  ```
 Download stable SonarQube version from below website. 
 - Website: https://www.sonarqube.org/downloads/
