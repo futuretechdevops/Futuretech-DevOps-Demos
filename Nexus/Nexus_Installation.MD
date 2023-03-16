@@ -3,7 +3,7 @@ Nexus is one a artifact repository which helps to store your build outcomes.
 
 ### Prerequisites
 
-1. EC2 instance with java 
+1. EC2 instance with java-1.8
 
 ### Implementation steps 
 
