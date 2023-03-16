@@ -43,18 +43,19 @@ Server authentication token To Get Authentication code follow below steps. Login
    - add the Repository URL : **https://github.com/futuretechdevops/sonar-scanning-examples.git**
    - add the Branch name : */master
 4. Under `Build Steps` > `Execute shell` 
-   ```
-cd sonarqube-scanner-maven/maven-basic
+```
+   cd sonarqube-scanner-maven/maven-basic
+   
+   /opt/maven/apache-maven-3.6.0/bin/mvn clean verify
+   
+   /opt/sonar_scanner/bin/sonar-scanner \
+    -D sonar.projectName='sonar-test-1' \
+    -D sonar.projectKey=sonar-test-1 \
+    -D sonar.exclusions=vendor/**,resources/**,**/*.java \
+    -D sonar.login=8d5adc71e906df4b902148c87182e7c9cbfc9698 \
+    -D sonar.projectVersion='1.0-SNAPSHOT' \
+    -D sonar.sources="${WORKSPACE}/sonarqube-scanner-maven/maven-basic" \
+    -X
+```
 
-/opt/maven/apache-maven-3.6.0/bin/mvn clean verify
-
-/opt/sonar_scanner/bin/sonar-scanner \
-  -D sonar.projectName='sonar-test-1' \
-  -D sonar.projectKey=sonar-test-1 \
-  -D sonar.exclusions=vendor/**,resources/**,**/*.java \
-  -D sonar.login=8d5adc71e906df4b902148c87182e7c9cbfc9698 \
-  -D sonar.projectVersion='1.0-SNAPSHOT' \
-  -D sonar.sources="${WORKSPACE}/sonarqube-scanner-maven/maven-basic" \
-  -X
-     ```
- Save and Run The Build and Validaat the Status on Sonar UI.
+Save and Run The Build and Validaat the Status on Sonar UI.
