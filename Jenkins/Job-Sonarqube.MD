@@ -30,7 +30,7 @@ Server authentication token To Get Authentication code follow below steps. Login
 
 #### 8. Creat `Sonar-test` new Project (SonarQube Server UI)
  Login to SonarQube server as a admin 
- `Administration` > `Project` > `Management` > Create Project`
+ `Administration` > `Project` > `Management` > `Create Project`
  
      - Name : sonar-test-1
      - Key  : sonar-test-1
