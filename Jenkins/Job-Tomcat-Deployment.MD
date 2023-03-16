@@ -1,4 +1,4 @@
-# Tpmcat Deployment Project
+# Tomcat Deployment Project
 
 We know how to use work with each and Git, Jenkins independently. What if you want to collaborate these two? that is where Simple DevOps project helps you. Follow below steps if you are a new guy to DevOps. You love it. 
 
