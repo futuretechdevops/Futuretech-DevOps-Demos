@@ -4,15 +4,22 @@ SonarQube provides the capability to not only show health of an application but 
 ### Follow this Article in **[YouTube](https://www.youtube.com/watch?v=zRQrcAi9UdU)**
 
 ### Prerequisites
-1. EC2 instance with Java installed
+1. EC2 instance with Java-1.8 installed (Ubuntu 18.04)
 1. MySQL Database Server or MyQL RDS instance. **[Get help here](https://www.youtube.com/watch?v=vLaW6b441x0)**
 
 ### Installation
 
+Install Java1.8 in Ubuntu
+```sh
+https://docs.datastax.com/en/jdk-install/doc/jdk-install/installOpenJdkDeb.html
+```
+
 Install MySQL client version 
 
  ```sh
-  # yum install mysql
+  # sudo apt update
+  # sudo apt install mysql-server  --> Ubuntu
+  # sudo yum update
   # yum insatll mysql-server  --> RHEL 9
  ```
 Download stable SonarQube version from below website. 
