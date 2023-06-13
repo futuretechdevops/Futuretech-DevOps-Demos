@@ -29,7 +29,7 @@ To deploy our build artifacts on tomcat server our Jenkins server need access. F
 - setup credentials
   - `credentials` > `jenkins` > `Global credentials` > `add credentials`
     - Username	: `deployer`
-    - Password : `deploy`
+    - Password : `deployer`
     - id      :  `Tomcat_user`
     - Description: `Tomcat user to deploy on tomcat server`
 
