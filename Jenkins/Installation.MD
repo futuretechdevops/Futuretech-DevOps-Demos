@@ -15,14 +15,14 @@ yum install java-11*
 #yum -y install java-11-openjdk.x86_64q
 ```
 
-### Check Java Version
+#### Check Java Version
 Lets install java and set the java home
 ```sh
 java -version
 ```
 
-### Optional JAVA HOME configuration
-#### Find java binaryfile location
+#### Optional JAVA HOME configuration
+##### Find java binaryfile location
 ```sh
 which java
 ls -lrth <above-command-output-filename>
@@ -30,7 +30,7 @@ ls -lrth <above-command-output-filename>
 readlink -f `which java`
 ```
 ```sh
-#### Set java_home and path
+##### Set java_home and path
 export JAVA_HOME=/usr/lib/jvm/java-11-openjdk-11.0.19.0.7-4.el9.x86_64
 PATH=$PATH:$JAVA_HOME
 # To set it permanently update on your home directory .bash_profile file
