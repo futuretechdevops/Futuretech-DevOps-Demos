@@ -72,7 +72,7 @@ http://<YOUR-SERVER-PUBLIC-IP>:8080
 - The default Username is `admin`
 - Grab the default password 
   - Password Location:`/var/lib/jenkins/secrets/initialAdminPassword`
-- Select `Default` Plugin Installation.
+- `Install suggested plugins`
 - Change admin password
   - `Admin` > `Configure` > `Password`
 - Configure `java` path
