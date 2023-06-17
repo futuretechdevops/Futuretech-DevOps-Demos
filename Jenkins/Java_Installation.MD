@@ -1,14 +1,24 @@
 ### Install Java
 We will be using open java for our demo, Get latest version from http://openjdk.java.net/install/
 ```sh
+# Java-11 Installation
 # Fedora
 sudo yum update
 sudo yum install java-11-openjdk*
-```
-```sh
+
 # Ubuntu
 sudo apt-get update
 sudo apt-get install openjdk-11-jdk
+```
+```sh
+# Java-1.8 Installation
+# Fedora
+sudo yum update
+sudo yum install java-1.8.0-openjdk-devel
+
+# Ubuntu
+sudo apt-get update
+sudo apt-get install openjdk-8-jdk
 ```
 
 ### Check Java Version
