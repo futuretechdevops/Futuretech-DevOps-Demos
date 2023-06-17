@@ -79,21 +79,25 @@ http://<YOUR-SERVER-PUBLIC-IP>:8080
 
 ### 8. Configure `java` path on:
 - Configure `java` path
-  - `Manage Jenkins` > `Tools` > `JDK`  
+  - `Manage Jenkins` > `Tools` > `JDK` 
+
 	```sh
 	Name : OpenJdk-11
 	JAVA_HOME : /usr/lib/jvm/java-11-openjdk-11.0.17.0.8-2.0.1.el7_9.i386
 	```
 
-### Test Jenkins Jobs
-1. Create “new item”
-1. Enter an item name – `My-First-Project`
+### 9. Create `Test` Jenkins Job. 
+1. Go to `Dashboard`
+2. Select `New Item`
+3. Enter an item name – `My-First-Project`
    - Chose `Freestyle` project
-1. Under Build section
-	Execute shell : echo "Welcome to Jenkins Demo"
-1. Save your job 
-1. Build job
-1. Check "console output"
+4. Under `Build Steps` select > `Execute shell`
+      ```
+      echo "Welcome to Jenkins Demo"
+      ```
+5. Save your job 
+6. Build job
+7. Check "console output"
 
 # Install Jenkins on Docker
 ### Dockerfile
