@@ -95,9 +95,11 @@ http://<YOUR-SERVER-PUBLIC-IP>:8080
       ```
       echo "Welcome to Jenkins Demo"
       ```
-5. Save your job 
-6. Build job
-7. Check "console output"
+5. Select `Save` 
+6. Select `Build Now`
+7. Check `console output` logs
+
+
 
 # Install Jenkins on Docker
 ### Dockerfile
@@ -118,8 +120,6 @@ ENV JENKINS_PORT=8080
 ADD https://repo.maven.apache.org/maven2/org/apache/maven/apache-maven/3.6.0/apache-maven-3.6.0-bin.tar.gz /opt
 RUN tar -xzf /opt/apache-maven-3.6.0-bin.tar.gz -C /opt
 RUN rm -f /opt/apache-maven-3.6.0-bin.tar.gz
-
-
 
 EXPOSE 8080 8090
 ENTRYPOINT "/usr/bin/jenkins"
