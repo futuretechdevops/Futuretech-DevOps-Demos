@@ -15,7 +15,7 @@ Jenkins is a self-contained Java-based program, ready to run out-of-the-box, wit
 4. Install Jenkins
 5. Start Jenkins
 6. Access Jenkins from UI
-7. Setup Initial Configuration Like :  
+7. Setup Initial Configuration:  
    - Install default plugins.
    - set user name and password.
 8. Configure `java` path on:
@@ -68,21 +68,22 @@ By default jenkins runs at port `8080`, You can access jenkins at
 http://<YOUR-SERVER-PUBLIC-IP>:8080
 ```
 
-### 7. Setup Initial Configuration Like : 
+### 7. Setup Initial Configuration: 
 - The default Username is `admin`
 - Grab the default password 
   - Password Location:`/var/lib/jenkins/secrets/initialAdminPassword`
 - `Install suggested plugins`
+- Set username and password
 - Change admin password
   - `Admin` > `Configure` > `Password`
+
+### 8. Configure `java` path on:
 - Configure `java` path
-  - `Manage Jenkins` > `Global Tool Configuration` > `JDK`  
- 
+  - `Manage Jenkins` > `Tools` > `JDK`  
 	```sh
 	Name : OpenJdk-11
 	JAVA_HOME : /usr/lib/jvm/java-11-openjdk-11.0.17.0.8-2.0.1.el7_9.i386
 	```
-- Create another admin user id
 
 ### Test Jenkins Jobs
 1. Create “new item”
