@@ -2,10 +2,27 @@
 Jenkins is a self-contained Java-based program, ready to run out-of-the-box, with packages for Windows, Mac OS X and other Unix-like operating systems. As an extensible automation server, Jenkins can be used as a simple CI server or turned into the continuous delivery hub for any project.
 
 ### Prerequisites
-1. AWS `EC2 Instance` --> `RHEL` OS, `2Core` CPU and `4GB` RAM
+1. Create AWS `EC2 Instance` --> `RHEL` OS, `2Core` CPU and `4GB` RAM
    - With Internet Access
    - Security Group open Port `8080` for internet
-2. Java 11.x
+2. Install Java 11.x
+3. Install Git
+
+### Steps
+1. Create AWS `EC2 Instance`
+2. Install Java 11.x
+3. Install Git
+4. Install Jenkins
+5. Start Jenkins
+6. Access Jenkins from UI
+7. Setup Initial Configuration Like :  
+   - Install default plugins.
+   - set user name and password.
+8. Configure `java` path on:
+   - `Manage Jenkins` > `tools` > `JDK`
+9. Create `Test` Jenkins Job. 
+
+
 
 ### Java Installation
 
