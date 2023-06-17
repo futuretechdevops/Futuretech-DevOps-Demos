@@ -1,14 +1,14 @@
 # Install Jenkins on AWS EC2
 Jenkins is a self-contained Java-based program, ready to run out-of-the-box, with packages for Windows, Mac OS X and other Unix-like operating systems. As an extensible automation server, Jenkins can be used as a simple CI server or turned into the continuous delivery hub for any project.
 
-### Prerequisites
+## Prerequisites
 1. Create AWS `EC2 Instance` --> `RHEL` OS, `2Core` CPU and `4GB` RAM
    - With Internet Access
    - Security Group open Port `8080` for internet
 2. Install Java 11.x
 3. Install Git
 
-### Steps
+## Steps
 1. Create AWS `EC2 Instance`
 2. Install Java 11.x
 3. Install Git
@@ -22,47 +22,57 @@ Jenkins is a self-contained Java-based program, ready to run out-of-the-box, wit
    - `Manage Jenkins` > `tools` > `JDK`
 9. Create `Test` Jenkins Job. 
 
+### 1. Create AWS `EC2 Instance`
+```
+Check `2-Day AWS Account Creation` documents
+```
 
-
-### Java Installation
-
+### 2. Install Java 11.x
 https://github.com/futuretechdevops/Futuretech-DevOps-Demos/blob/master/Jenkins/Java_Installation.MD
 
-## Install Jenkins
+### 3. Install Git
+```
+# Fedora
+sudo yum install git
+
+# Ubuntu
+sudo apt-get install git
+```
+
+### 4. Install Jenkins
 You can install jenkins using the rpm or by setting up the repo. We will setup the repo so that we can update it easily in future.
-
-Get latest version of jenkins from https://pkg.jenkins.io/redhat-stable/
-
+Get latest version of jenkins from :: https://pkg.jenkins.io/redhat-stable/
 Or check the Jenkins official documentation for linux installation https://www.jenkins.io/doc/book/installing/linux/
 ```sh
-yum -y install wget
-wget -O /etc/yum.repos.d/jenkins.repo https://pkg.jenkins.io/redhat-stable/jenkins.repo
+sudo yum -y install wget
+sudo wget -O /etc/yum.repos.d/jenkins.repo https://pkg.jenkins.io/redhat-stable/jenkins.repo
 sudo rpm --import https://pkg.jenkins.io/redhat-stable/jenkins.io-2023.key
-yum upgrade
-# Add required dependencies for the jenkins package
+sudo yum upgrade
 yum install jenkins
 systemctl daemon-reload
 ```
 
-### Start Jenkins
+### 5. Start Jenkins
 ```sh
-# Start jenkins service
-systemctl start jenkins
+systemctl start jenkins    # --> start | stop | status | restart
+or
+sudo service jenkins start
 
-# Setup Jenkins to start at boot,
-systemctl enable jenkins
+# To start the Jenkins automatically after system reboot.
+sudo systemctl enable jenkins
 ```
 
-#### Accessing Jenkins
+### 6. Access Jenkins from UI
 By default jenkins runs at port `8080`, You can access jenkins at
 ```sh
-http://YOUR-SERVER-PUBLIC-IP:8080
+http://<YOUR-SERVER-PUBLIC-IP>:8080
 ```
-#### Configure Jenkins
+
+### 7. Setup Initial Configuration Like : 
 - The default Username is `admin`
 - Grab the default password 
   - Password Location:`/var/lib/jenkins/secrets/initialAdminPassword`
-- `Skip` Plugin Installation; _We can do it later_
+- Select `Default` Plugin Installation.
 - Change admin password
   - `Admin` > `Configure` > `Password`
 - Configure `java` path
