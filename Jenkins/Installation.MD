@@ -49,12 +49,12 @@ sudo wget -O /etc/yum.repos.d/jenkins.repo https://pkg.jenkins.io/redhat-stable/
 sudo rpm --import https://pkg.jenkins.io/redhat-stable/jenkins.io-2023.key
 sudo yum upgrade
 yum install jenkins
-systemctl daemon-reload
+sudo systemctl daemon-reload
 ```
 
 ### 5. Start Jenkins
 ```sh
-systemctl start jenkins    # --> start | stop | status | restart
+sudo systemctl start jenkins    # --> start | stop | status | restart
 or
 sudo service jenkins start
 
