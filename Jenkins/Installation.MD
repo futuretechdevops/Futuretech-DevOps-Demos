@@ -7,10 +7,9 @@ Jenkins is a self-contained Java-based program, ready to run out-of-the-box, wit
    - Security Group open Port `8080` for internet
 2. Java 11.x
 
-### Install Java
-```
+### Java Installation
+
 https://github.com/futuretechdevops/Futuretech-DevOps-Demos/blob/master/Jenkins/Java_Installation.MD
-```
 
 ## Install Jenkins
 You can install jenkins using the rpm or by setting up the repo. We will setup the repo so that we can update it easily in future.
