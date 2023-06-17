@@ -28,8 +28,9 @@ ls -lrth <above-command-output-filename>
 (OR)
 readlink -f `which java`
 ```
-```sh
+
 ##### Set java_home and path
+```sh
 export JAVA_HOME=/usr/lib/jvm/java-11-openjdk-11.0.19.0.7-4.el9.x86_64
 PATH=$PATH:$JAVA_HOME
 # To set it permanently update on your home directory .bash_profile file
