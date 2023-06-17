@@ -98,10 +98,10 @@ http://<YOUR-SERVER-PUBLIC-IP>:8080
 5. Select `Save` 
 6. Select `Build Now`
 7. Check `Console Output` logs
-
-
-
-
+.
+.
+.
+.
 
 
 
