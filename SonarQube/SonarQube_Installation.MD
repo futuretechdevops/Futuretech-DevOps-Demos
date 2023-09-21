@@ -21,6 +21,7 @@ Install MySQL client version
   # sudo apt install mysql-server  --> Ubuntu
   # sudo yum update
   # yum insatll mysql-server  --> RHEL 9
+  # sudo service mysqld start
  ```
 Download stable SonarQube version from below website. 
 - Website: https://www.sonarqube.org/downloads/
