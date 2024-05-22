@@ -15,7 +15,8 @@
 1. Under `Build Steps` > `Invoke top-level Maven targets`
    - Select : **Maven Version**
    - Goals : **clean test**
+   - POM : **maven-unit-test**
 
 1. Publish JUnit Reports
 1. Under `Post-build Actions` > `Publish JUnit test result report`
-   - Test report XMLs :  **target/surefire-reports/*.xml**
+   - Test report XMLs :  **maven-unit-test/target/surefire-reports/*.xml**
